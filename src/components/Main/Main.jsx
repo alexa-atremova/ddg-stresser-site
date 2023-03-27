@@ -1,14 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-
+import back from "./../../assets/back.png";
 import video from "./../../assets/gif.mp4";
 
 const MainContainer = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
   width: 100%;
   height: 990px;
+  background-image: url(${back});
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 360px 0%;
+  z-index: -1;
 `;
 const Wrapper = styled.div`
   display: flex;

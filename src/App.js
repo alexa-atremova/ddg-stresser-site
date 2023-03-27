@@ -2,6 +2,7 @@ import Header from "./components/Header/Heder";
 import Main from "./components/Main/Main";
 import styled from "styled-components";
 import GlobalStyle from "./globalStyles";
+import Footer from "./components/Footer/Footer";
 
 export const AppConteiner = styled.div`
   width: 100%;
@@ -15,6 +16,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Main />
+      <Footer />
     </AppConteiner>
   );
 }
