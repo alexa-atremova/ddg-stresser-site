@@ -18,11 +18,11 @@ function App() {
     <AppConteiner>
       <GlobalStyle />
       <Header />
-      <Main />
+      {/* <Main />
       <SecondBlock />
       <FAQ />
       <Price />
-      <Footer />
+      <Footer /> */}
     </AppConteiner>
   );
 }

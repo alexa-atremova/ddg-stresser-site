@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   HeaderContainer,
   LanguageButton,
@@ -14,8 +14,26 @@ import {
 import logo from "./../../assets/logo.png";
 import ru from "./../../assets/ru.png";
 import eng from "./../../assets/eng.png";
+import {
+  CloseButton,
+  CloseIcon,
+  HamburgerMenuButton,
+  HamburgerMenuIcon,
+  Menu,
+  MenuButton,
+  Modal,
+  ModalContent,
+} from "./menu-styles";
+import arrow_img1 from "./../../assets/arrow_img1.png";
+import arrow_img2 from "./../../assets/arrow_img2.png";
 
 const Header = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModal = () => {
+    setShowModal(!showModal);
+  };
+
   return (
     <HeaderContainer>
       <Wrapper>
@@ -23,22 +41,44 @@ const Header = () => {
         <Container>
           <LinksContainer>
             <LinkTelegram href="https://example.com" target="_blank">
-              Телеграмм Канал
+              Телеграм Канал
             </LinkTelegram>
             <LinkBot href="https://example.com" target="_blank">
-              Телеграмм Бот
+              Телеграм Бот
             </LinkBot>
           </LinksContainer>
           <ButtonsContainer>
             <LanguageButton>
               <LanguageIcon src={ru} />
-              Русс
+              Рус
             </LanguageButton>
             <LanguageButton>
               <LanguageIcon src={eng} />
               Eng
             </LanguageButton>
           </ButtonsContainer>
+          <Menu>
+            <HamburgerMenuButton onClick={handleModal}>
+              <HamburgerMenuIcon />
+            </HamburgerMenuButton>
+            {showModal && (
+              <Modal onClick={handleModal}>
+                <ModalContent onClick={(e) => e.stopPropagation()}>
+                  <div className="img1">
+                    <img src={arrow_img2} alt="" />
+                  </div>
+                  <div className="img2">
+                    <img src={arrow_img2} alt="" />
+                  </div>
+                  <CloseButton onClick={handleModal}>
+                    <CloseIcon />
+                  </CloseButton>
+                  <LinkTelegram href="#">Авторизоваться</LinkTelegram>
+                  <LinkBot href="#">Телеграм бот</LinkBot>
+                </ModalContent>
+              </Modal>
+            )}
+          </Menu>
         </Container>
       </Wrapper>
     </HeaderContainer>

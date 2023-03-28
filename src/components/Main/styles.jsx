@@ -12,7 +12,7 @@ export const MainContainer = styled.main`
   background-image: url(${back});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 500px 0%;
+  background-position: 350px 0%;
   z-index: -1;
 `;
 export const Wrapper = styled.div`
