@@ -3,6 +3,9 @@ import Main from "./components/Main/Main";
 import styled from "styled-components";
 import GlobalStyle from "./globalStyles";
 import Footer from "./components/Footer/Footer";
+import FAQ from "./components/FAQ/FAQ";
+import SecondBlock from "./components/SecondBlock/SecondBlock";
+import Price from "./components/Price/Price";
 
 export const AppConteiner = styled.div`
   width: 100%;
@@ -16,6 +19,9 @@ function App() {
       <GlobalStyle />
       <Header />
       <Main />
+      <SecondBlock />
+      <FAQ />
+      <Price />
       <Footer />
     </AppConteiner>
   );
