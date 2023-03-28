@@ -17,6 +17,7 @@ import {
   TopSection,
   Wrapper,
 } from "./styles";
+import SecondBlockSlider from "./SecondBlock/SecondBlockSlider";
 
 const SecondBlock = () => {
   return (
@@ -71,6 +72,7 @@ const SecondBlock = () => {
               и наши инженеры постоянно совершенствуют их.
             </BlockText>
           </WrapBlock>
+          <SecondBlockSlider />
         </BottomSection>
       </Wrapper>
     </MainContainer>
