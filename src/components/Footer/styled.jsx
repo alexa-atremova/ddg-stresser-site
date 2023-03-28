@@ -9,17 +9,28 @@ export const FooterContainer = styled.header`
   height: 350px;
   background: #fcfbfc;
   gap: 40px;
+  @media (max-width: 767px) {
+    gap: 20px;
+    height: 420px;
+  }
 `;
 
 export const Logo = styled.img`
   width: 180px;
   height: 180px;
+  @media (max-width: 767px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
   gap: 10px;
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 export const LinkTelegram = styled.a`
   display: flex;
