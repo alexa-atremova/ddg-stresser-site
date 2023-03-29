@@ -3,7 +3,7 @@ import back from "./../../assets/back.png";
 
 export const MainContainer = styled.main`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   position: relative;
   width: 100%;
@@ -12,20 +12,20 @@ export const MainContainer = styled.main`
   background-image: url(${back});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 350px 0%;
+  background-position: 400px 0%;
 
   @media (max-width: 1919px) {
     background-position: 250px 0%;
-    height: 750px;
+    height: 600px;
   }
   @media (max-width: 1365px) {
     align-items: flex-start;
 
-    background-position: -300px 0%;
-    height: 1200px;
+    background-position: -200px 0%;
+    height: 1100px;
   }
   @media (max-width: 767px) {
-    background-position: -300px 0%;
+    background-position: -450px 0%;
     height: 1640px;
   }
 `;
@@ -35,7 +35,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   flex-direction: column;
   max-width: 1420px;
-  gap: 100px;
+  gap: 30px;
   @media (max-width: 1919px) {
     max-width: 1166px;
     gap: 0px;
@@ -89,6 +89,16 @@ export const Title = styled.h1`
   color: #1b1b1b;
 
   width: 670px;
+  /* ::after {
+    content: "";
+    margin-top: 20px;
+    display: block;
+    align-self: flex-start;
+    width: 250px;
+    height: 3px;
+
+    background-color: #eaeaea;
+  } */
   @media (max-width: 1919px) {
     font-size: 28px;
     line-height: 40px;
@@ -112,12 +122,13 @@ export const Text = styled.p`
   font-family: "Gill Sans";
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 24px;
   line-height: 35px;
   /* or 159% */
 
   color: #414141;
-
+  margin: 0;
+  margin-bottom: 20px;
   width: 640px;
   @media (max-width: 1919px) {
     font-size: 18px;
@@ -211,7 +222,7 @@ export const RightSection = styled.div`
   width: 500px;
   height: 552px;
   margin-right: 100px;
-  @media (max-width: 1365px) {
+  @media (max-width: 1919px) {
     width: 404px;
     height: 392px;
     margin-right: 0px;

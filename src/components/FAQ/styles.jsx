@@ -46,6 +46,15 @@ export const StyledFAQ = styled.section`
         /* identical to box height, or 162% */
 
         color: #1b1b1b;
+        /* ::after {
+          content: "";
+          margin-top: 20px;
+          display: block;
+          width: 250px;
+          height: 3px;
+
+          background-color: #eaeaea;
+        } */
         @media (max-width: 1919px) {
           height: 45px;
           font-size: 35px;

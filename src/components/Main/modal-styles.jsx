@@ -36,7 +36,7 @@ export const AuthInput = styled.div`
     width: 537px;
     height: 42px;
     padding: 0 20px;
-    font-size: 11px;
+    font-size: 15px;
     border: 1px solid #eaeaea;
     border-radius: 5px;
   }

@@ -4,6 +4,8 @@ import Imgs1 from "./../../assets/1.png";
 import Imgs2 from "./../../assets/2.png";
 import Imgs3 from "./../../assets/3.png";
 import Imgs4 from "./../../assets/4.png";
+import images1 from "./../../assets/images1.png";
+import images2 from "./../../assets/images2.png";
 import {
   BlockWrapBlock,
   BlockText,
@@ -25,6 +27,7 @@ const SecondBlock = () => {
       <BlockWrapper>
         <BlockTopSection>
           <BlockLeftSection>
+            <img className="backimg1" src={images1} alt="" />
             <img src={Imgs} alt="" />
           </BlockLeftSection>
           <BlockRightSection>
@@ -36,6 +39,7 @@ const SecondBlock = () => {
               концентратором вы можете использовать пользовательские настройки
               для обхода любой цели, даже если у них есть блокировка DDOS-атак.
             </Text>
+            <img className="backimg2" src={images2} alt="" />
           </BlockRightSection>
         </BlockTopSection>
         <BlockBottomSection>

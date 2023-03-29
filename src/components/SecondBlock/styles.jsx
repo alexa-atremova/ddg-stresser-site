@@ -6,7 +6,7 @@ export const BlockContainer = styled.main`
   justify-content: center;
   position: relative;
   width: 100%;
-
+  overflow: hidden;
   background: #fcfbfc;
 `;
 export const BlockWrapper = styled.div`
@@ -50,15 +50,29 @@ export const BlockTopSection = styled.div`
   }
 `;
 export const BlockLeftSection = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 519px;
   height: 511px;
+
+  .backimg1 {
+    position: absolute;
+
+    left: -310px;
+    bottom: -40px;
+  }
   @media (max-width: 1919px) {
     width: 447px;
     height: 441px;
+    .backimg1 {
+      width: 294.88px;
+      height: 305.46px;
+      left: -277px;
+      bottom: -82px;
+    }
     img {
       width: 447px;
       height: 441px;
@@ -66,11 +80,19 @@ export const BlockLeftSection = styled.div`
   }
   @media (max-width: 1365px) {
     order: 2;
+    .backimg1 {
+      left: -277px;
+      bottom: -541px;
+    }
   }
   @media (max-width: 767px) {
     max-width: 320px;
     width: 320px;
     height: 315px;
+    .backimg1 {
+      left: -200px;
+      bottom: -244px;
+    }
     img {
       width: 320px;
       height: 315px;
@@ -81,6 +103,7 @@ export const BlockLeftSection = styled.div`
 export const Title = styled.h1`
   display: flex;
   align-self: flex-start;
+  flex-direction: column;
   font-family: "Avante Int";
   font-style: normal;
   font-weight: 700;
@@ -91,6 +114,16 @@ export const Title = styled.h1`
   color: #1b1b1b;
 
   width: 574px;
+  /* ::after {
+    content: "";
+    margin-top: 20px;
+    display: block;
+    align-self: flex-start;
+    width: 250px;
+    height: 3px;
+
+    background-color: #eaeaea;
+  } */
   @media (max-width: 1919px) {
     width: 502px;
     font-size: 35px;
@@ -116,7 +149,7 @@ export const Text = styled.p`
   /* or 175% */
 
   color: #1b1b1b;
-
+  margin: 0;
   width: 664px;
   @media (max-width: 1919px) {
     width: 573.1px;
@@ -134,6 +167,38 @@ export const BlockRightSection = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+  .backimg2 {
+    position: absolute;
+
+    right: -299px;
+    top: 100px;
+  }
+  @media (max-width: 1919px) {
+    .backimg2 {
+      width: 149.5px;
+      height: 200px;
+
+      right: -150px;
+      top: 100px;
+    }
+  }
+
+  @media (max-width: 1365px) {
+    .backimg2 {
+      width: 149.5px;
+      height: 200px;
+
+      right: -134px;
+      top: 557px;
+    }
+  }
+  @media (max-width: 767px) {
+    .backimg2 {
+      right: -134px;
+      top: 326px;
+    }
+  }
 `;
 
 export const BlockBottomSection = styled.div`
