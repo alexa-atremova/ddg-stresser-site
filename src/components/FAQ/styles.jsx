@@ -15,6 +15,13 @@ export const StyledFAQ = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    @media (max-width: 1919px) {
+      margin-top: 50px;
+      max-width: 675px;
+    }
+    @media (max-width: 767px) {
+      max-width: 320px;
+    }
     .text {
       display: flex;
       align-items: center;
@@ -23,6 +30,11 @@ export const StyledFAQ = styled.section`
       margin-top: 50px;
       margin-bottom: 50px;
       gap: 30px;
+      @media (max-width: 1919px) {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        gap: 20px;
+      }
       h1 {
         height: 65px;
         margin: 0;
@@ -34,6 +46,18 @@ export const StyledFAQ = styled.section`
         /* identical to box height, or 162% */
 
         color: #1b1b1b;
+        @media (max-width: 1919px) {
+          height: 45px;
+          font-size: 35px;
+          line-height: 45px;
+        }
+        @media (max-width: 767px) {
+          width: 320px;
+          height: 90px;
+          font-size: 28px;
+          line-height: 45px;
+          text-align: center;
+        }
       }
       p {
         margin: 0;
@@ -48,12 +72,22 @@ export const StyledFAQ = styled.section`
         text-align: center;
 
         color: #1b1b1b;
+        @media (max-width: 1919px) {
+          width: 643.87px;
+          font-size: 18px;
+          line-height: 25px;
+        }
+        @media (max-width: 767px) {
+          width: 320px;
+        }
       }
     }
     ul {
       list-style-type: none;
       display: flex;
+
       flex-direction: column;
+
       gap: 10px;
       padding: 0;
       li {
@@ -61,7 +95,7 @@ export const StyledFAQ = styled.section`
         border: 2px solid #ebebeb;
         border-radius: 0px 10px;
 
-        padding: 15px;
+        padding: 5px 15px;
         font-family: "Gill Sans";
         font-style: normal;
         font-weight: 600;
@@ -71,12 +105,14 @@ export const StyledFAQ = styled.section`
 
         color: #000000;
 
-        height: 60px;
+        height: 50px;
         overflow: hidden;
         transition: all 0.3s 0.2s linear;
 
         cursor: pointer;
+
         .head {
+          margin-top: 5px;
           display: flex;
           flex-direction: row;
           width: 100%;
@@ -84,6 +120,7 @@ export const StyledFAQ = styled.section`
           align-items: center;
 
           h2 {
+            margin: 0;
             font-family: "Gill Sans";
             font-style: normal;
             font-weight: 600;
@@ -92,10 +129,20 @@ export const StyledFAQ = styled.section`
             /* identical to box height, or 159% */
 
             color: #1b1b1b;
+            @media (max-width: 1919px) {
+              font-size: 16px;
+              line-height: 25px;
+            }
+            @media (max-width: 767px) {
+            }
           }
           .arrow {
             width: 30px;
             height: 30px;
+            @media (max-width: 1919px) {
+              width: 20px;
+              height: 20px;
+            }
           }
         }
 
@@ -111,57 +158,31 @@ export const StyledFAQ = styled.section`
 
           color: #1b1b1b;
           transition: all 0.5s ease;
+          @media (max-width: 1919px) {
+            font-size: 16px;
+            line-height: 25px;
+          }
+        }
+        @media (max-width: 1920px) {
+          height: 40px;
         }
         @media (max-width: 768px) {
-          height: 50px;
-        }
-      }
-      .first {
-        @media (max-width: 437px) {
-          height: 70px;
         }
       }
       .second {
-        @media (max-width: 485px) {
-          height: 70px;
+        @media (max-width: 768px) {
+          height: 60px;
         }
       }
       .third {
-        @media (max-width: 542px) {
-          height: 70px;
+        @media (max-width: 768px) {
+          height: 60px;
         }
       }
-      .fourth {
-        @media (max-width: 566px) {
-          height: 70px;
-        }
-        @media (max-width: 370px) {
-          height: 90px;
-        }
-      }
+
       .fifth {
-        @media (max-width: 1035px) {
-          height: 90px;
-        }
         @media (max-width: 768px) {
-          height: 70px;
-        }
-        @media (max-width: 424px) {
-          height: 90px;
-        }
-      }
-      .sixth {
-        @media (max-width: 1035px) {
-          height: 90px;
-        }
-        @media (max-width: 768px) {
-          height: 70px;
-        }
-        @media (max-width: 447px) {
-          height: 90px;
-        }
-        @media (max-width: 366px) {
-          height: 110px;
+          height: 60px;
         }
       }
       .opened {
@@ -175,132 +196,53 @@ export const StyledFAQ = styled.section`
         }
       }
       .opened.first {
-        @media (max-width: 1204px) {
-          height: 204px;
+        @media (max-width: 1919px) {
+          height: 150px;
         }
-        @media (max-width: 1010px) {
-          height: 228px;
-        }
-        @media (max-width: 886px) {
-          height: 252px;
-        }
-        @media (max-width: 775px) {
-          height: 276px;
-        }
-        @media (max-width: 768px) {
-          height: 210px;
-        }
-        @media (max-width: 682px) {
-          height: 230px;
-        }
-        @media (max-width: 589px) {
-          height: 250px;
-        }
-        @media (max-width: 536px) {
-          height: 270px;
-        }
-        @media (max-width: 477px) {
-          height: 290px;
-        }
-        @media (max-width: 444px) {
-          height: 310px;
-        }
-        @media (max-width: 437px) {
-          height: 332px;
-        }
-        @media (max-width: 414px) {
-          height: 352px;
-        }
-        @media (max-width: 377px) {
-          height: 372px;
-        }
-        @media (max-width: 363px) {
-          height: 392px;
+
+        @media (max-width: 767px) {
+          height: 255px;
         }
       }
       .opened.second {
         height: 200px;
-        @media (max-width: 1341px) {
-          height: 132px;
+        @media (max-width: 1919px) {
+          height: 130px;
         }
-        @media (max-width: 779px) {
-          height: 156px;
-        }
-        @media (max-width: 768px) {
-          height: 128px;
-        }
-        @media (max-width: 592px) {
-          height: 148px;
-        }
-        @media (max-width: 485px) {
-          height: 172px;
-        }
-        @media (max-width: 412px) {
-          height: 192px;
+
+        @media (max-width: 767px) {
+          height: 230px;
         }
       }
       .opened.third {
         height: 230px;
-        @media (max-width: 542px) {
-          height: 124px;
+        @media (max-width: 1919px) {
+          height: 150px;
         }
-        @media (max-width: 375px) {
-          height: 148px;
-        }
-        @media (max-width: 361px) {
-          height: 168px;
+
+        @media (max-width: 767px) {
+          height: 280px;
         }
       }
 
       .opened.fifth {
         height: 230px;
-        @media (max-width: 1100px) {
-          height: 178px;
+        @media (max-width: 1919px) {
+          height: 160px;
         }
-        @media (max-width: 1035px) {
-          height: 208px;
-        }
-        @media (max-width: 806px) {
-          height: 234px;
-        }
-        @media (max-width: 768px) {
-          height: 194px;
-        }
-        @media (max-width: 620px) {
-          height: 214px;
-        }
-        @media (max-width: 506px) {
-          height: 234px;
-        }
-        @media (max-width: 425px) {
-          height: 264px;
-        }
-        @media (max-width: 411px) {
-          height: 284px;
+
+        @media (max-width: 767px) {
+          height: 300px;
         }
       }
       .opened.sixth {
         height: 180px;
-        @media (max-width: 1035px) {
-          height: 158px;
+        @media (max-width: 1919px) {
+          height: 110px;
         }
-        @media (max-width: 775px) {
-          height: 182px;
-        }
-        @media (max-width: 768px) {
-          height: 146px;
-        }
-        @media (max-width: 590px) {
-          height: 166px;
-        }
-        @media (max-width: 447px) {
-          height: 188px;
-        }
-        @media (max-width: 415px) {
-          height: 208px;
-        }
-        @media (max-width: 366px) {
-          height: 232px;
+
+        @media (max-width: 767px) {
+          height: 180px;
         }
       }
     }

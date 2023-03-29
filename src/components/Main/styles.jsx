@@ -22,7 +22,7 @@ export const MainContainer = styled.main`
     align-items: flex-start;
 
     background-position: -300px 0%;
-    height: 1350px;
+    height: 1200px;
   }
   @media (max-width: 767px) {
     background-position: -300px 0%;

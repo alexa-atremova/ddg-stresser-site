@@ -5,29 +5,29 @@ import Imgs2 from "./../../assets/2.png";
 import Imgs3 from "./../../assets/3.png";
 import Imgs4 from "./../../assets/4.png";
 import {
-  WrapBlock,
+  BlockWrapBlock,
   BlockText,
   BlockTitle,
-  BottomSection,
-  LeftSection,
-  MainContainer,
-  RightSection,
+  BlockBottomSection,
+  BlockLeftSection,
+  BlockContainer,
+  BlockRightSection,
   Text,
   Title,
-  TopSection,
-  Wrapper,
+  BlockTopSection,
+  BlockWrapper,
 } from "./styles";
-import SecondBlockSlider from "./SecondBlock/SecondBlockSlider";
+import SecondBlockSlider from "./SecondBlockSlider/SecondBlockSlider";
 
 const SecondBlock = () => {
   return (
-    <MainContainer>
-      <Wrapper>
-        <TopSection>
-          <LeftSection>
+    <BlockContainer>
+      <BlockWrapper>
+        <BlockTopSection>
+          <BlockLeftSection>
             <img src={Imgs} alt="" />
-          </LeftSection>
-          <RightSection>
+          </BlockLeftSection>
+          <BlockRightSection>
             <Title>Преимущества DDG STRESSER</Title>
             <Text>
               Наш настраиваемый концентратор атак стрессеров позволяет вам
@@ -36,18 +36,18 @@ const SecondBlock = () => {
               концентратором вы можете использовать пользовательские настройки
               для обхода любой цели, даже если у них есть блокировка DDOS-атак.
             </Text>
-          </RightSection>
-        </TopSection>
-        <BottomSection>
-          <WrapBlock>
+          </BlockRightSection>
+        </BlockTopSection>
+        <BlockBottomSection>
+          <BlockWrapBlock>
             <img src={Imgs1} alt="" />
             <BlockTitle>Безопасная оплата</BlockTitle>
             <BlockText>
               Мы обрабатываем все ваши платежи криптовалютой с нашими
               собственными узлами, чтобы обеспечить 100% анонимность.
             </BlockText>
-          </WrapBlock>
-          <WrapBlock>
+          </BlockWrapBlock>
+          <BlockWrapBlock>
             <img src={Imgs2} alt="" />
             <BlockTitle>Ваша безопасность важна для нас</BlockTitle>
             <BlockText style={{ width: "350px" }}>
@@ -55,27 +55,27 @@ const SecondBlock = () => {
               контролироваться. Ваша конфиденциальность в безопасности, никакие
               журналы не хранятся, и все данные шифруются.
             </BlockText>
-          </WrapBlock>
-          <WrapBlock>
+          </BlockWrapBlock>
+          <BlockWrapBlock>
             <img src={Imgs3} alt="" />
             <BlockTitle>Современные методы атаки</BlockTitle>
             <BlockText>
               Наша поддержка здесь, чтобы помочь вам, если вам что-то нужно, вы
               можете связаться с нами.
             </BlockText>
-          </WrapBlock>
-          <WrapBlock>
+          </BlockWrapBlock>
+          <BlockWrapBlock>
             <img src={Imgs4} alt="" />
             <BlockTitle>Служба поддержки с вами 24/7</BlockTitle>
             <BlockText>
               Наши методы ddos-атак способны обходить новейшие средства защиты,
               и наши инженеры постоянно совершенствуют их.
             </BlockText>
-          </WrapBlock>
-          <SecondBlockSlider />
-        </BottomSection>
-      </Wrapper>
-    </MainContainer>
+          </BlockWrapBlock>
+        </BlockBottomSection>
+        <SecondBlockSlider />
+      </BlockWrapper>
+    </BlockContainer>
   );
 };
 

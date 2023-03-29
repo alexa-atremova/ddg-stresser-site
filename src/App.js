@@ -20,8 +20,8 @@ function App() {
       <Header />
       <Main />
       <SecondBlock />
-      {/* <FAQ />
-      <Price />*/}
+      <FAQ />
+      {/*  {/*<Price />*/}
       <Footer />
     </AppConteiner>
   );

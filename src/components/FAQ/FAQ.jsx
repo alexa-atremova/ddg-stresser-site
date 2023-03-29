@@ -49,7 +49,7 @@ export default function FAQ() {
             <div className="head">
               <h2>Сколько времени занимает активация моего членства?</h2>
               <img
-                className={active === "second" ? "upArrow" : "downArrow"}
+                className="arrow"
                 src={active === "second" ? close : open}
                 alt=""
               />
@@ -69,7 +69,7 @@ export default function FAQ() {
             <div className="head">
               <h2>В чем разница между Premium и Non-Premium?</h2>
               <img
-                className={active === "third" ? "upArrow" : "downArrow"}
+                className="arrow"
                 src={active === "third" ? close : open}
                 alt=""
               />
@@ -91,7 +91,7 @@ export default function FAQ() {
             <div className="head">
               <h2>Могу ли я поделиться своей учетной записью с кем-то еще?</h2>
               <img
-                className={active === "fifth" ? "upArrow" : "downArrow"}
+                className="arrow"
                 src={active === "fifth" ? close : open}
                 alt=""
               />
@@ -113,7 +113,7 @@ export default function FAQ() {
             <div className="head">
               <h2>Почему DDG-STRESSER?</h2>
               <img
-                className={active === "sixth" ? "upArrow" : "downArrow"}
+                className="arrow"
                 src={active === "sixth" ? close : open}
                 alt=""
               />

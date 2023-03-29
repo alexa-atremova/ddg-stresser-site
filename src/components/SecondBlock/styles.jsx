@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const MainContainer = styled.main`
+export const BlockContainer = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,7 +9,7 @@ export const MainContainer = styled.main`
 
   background: #fcfbfc;
 `;
-export const Wrapper = styled.div`
+export const BlockWrapper = styled.div`
   margin-top: 50px;
   margin-bottom: 50px;
   display: flex;
@@ -27,10 +27,11 @@ export const Wrapper = styled.div`
   }
   @media (max-width: 767px) {
     max-width: 320px;
+    gap: 10px;
   }
 `;
 
-export const TopSection = styled.div`
+export const BlockTopSection = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -48,7 +49,7 @@ export const TopSection = styled.div`
     max-width: 320px;
   }
 `;
-export const LeftSection = styled.div`
+export const BlockLeftSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -128,18 +129,19 @@ export const Text = styled.p`
   }
 `;
 
-export const RightSection = styled.div`
+export const BlockRightSection = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 `;
 
-export const BottomSection = styled.div`
+export const BlockBottomSection = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+
   gap: 30px;
   @media (max-width: 1919px) {
     gap: 25px;
@@ -150,7 +152,7 @@ export const BottomSection = styled.div`
   }
 `;
 
-export const WrapBlock = styled.div`
+export const BlockWrapBlock = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -159,10 +161,14 @@ export const WrapBlock = styled.div`
   margin: 0;
   gap: 10px;
   @media (max-width: 1919px) {
+    width: 292.86px;
     img {
       width: 70.32px;
       height: 70.32px;
     }
+  }
+  @media (max-width: 1365px) {
+    width: 260px;
   }
   @media (max-width: 767px) {
     display: none;
