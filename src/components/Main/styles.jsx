@@ -13,7 +13,7 @@ export const MainContainer = styled.main`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 350px 0%;
-  z-index: -1;
+
   @media (max-width: 1919px) {
     background-position: 250px 0%;
     height: 750px;
@@ -140,39 +140,56 @@ export const Button = styled.button`
   border: none;
   cursor: pointer;
 
-  &:first-of-type {
-    width: 196px;
-    height: 55px;
+  width: 273px;
+  height: 55px;
+  margin-left: 20px;
+  background: linear-gradient(180deg, #64bcfc 0%, #3d99ed 100%);
 
-    background: #eaeaea;
-    border-radius: 0px 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 10px;
 
-    font-family: "Gill Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 25px;
+  font-family: "Gill Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25px;
 
-    color: #1b1b1b;
+  color: #ffffff;
+
+  @media (max-width: 1919px) {
+    &:first-of-type {
+      width: 153px;
+      height: 42px;
+      font-size: 17.2089px;
+      line-height: 20px;
+    }
+    &:last-of-type {
+      width: 213px;
+      height: 42px;
+      margin-left: 15px;
+      font-size: 17.2089px;
+      line-height: 20px;
+    }
   }
+`;
+export const ButtonSing = styled.button`
+  border: none;
+  cursor: pointer;
 
-  &:last-of-type {
-    width: 273px;
-    height: 55px;
-    margin-left: 20px;
-    background: linear-gradient(180deg, #64bcfc 0%, #3d99ed 100%);
+  width: 196px;
+  height: 55px;
 
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 0px 10px;
+  background: #eaeaea;
+  border-radius: 0px 10px;
 
-    font-family: "Gill Sans";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 25px;
+  font-family: "Gill Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 25px;
 
-    color: #ffffff;
-  }
+  color: #1b1b1b;
+
   @media (max-width: 1919px) {
     &:first-of-type {
       width: 153px;

@@ -13,10 +13,10 @@ const Footer = () => {
     <FooterContainer>
       <Logo src={logo} alt="Logo" />
       <Container>
-        <LinkTelegram href="https://example.com" target="_blank">
+        <LinkTelegram href="https://t.me/ddg_stresser" target="_blank">
           Телеграм Канал
         </LinkTelegram>
-        <LinkBot href="https://example.com" target="_blank">
+        <LinkBot href="https://t.me/ddg_stresser_bot?start=27" target="_blank">
           Телеграм Бот
         </LinkBot>
       </Container>

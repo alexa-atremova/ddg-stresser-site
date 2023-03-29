@@ -24,7 +24,6 @@ import {
   Modal,
   ModalContent,
 } from "./menu-styles";
-import arrow_img1 from "./../../assets/arrow_img1.png";
 import arrow_img2 from "./../../assets/arrow_img2.png";
 
 const Header = () => {
@@ -40,10 +39,13 @@ const Header = () => {
         <Logo src={logo} alt="Logo" />
         <Container>
           <LinksContainer>
-            <LinkTelegram href="https://example.com" target="_blank">
+            <LinkTelegram href="https://t.me/ddg_stresser" target="_blank">
               Телеграм Канал
             </LinkTelegram>
-            <LinkBot href="https://example.com" target="_blank">
+            <LinkBot
+              href="https://t.me/ddg_stresser_bot?start=27"
+              target="_blank"
+            >
               Телеграм Бот
             </LinkBot>
           </LinksContainer>
@@ -74,7 +76,12 @@ const Header = () => {
                     <CloseIcon />
                   </CloseButton>
                   <LinkTelegram href="#">Авторизоваться</LinkTelegram>
-                  <LinkBot href="#">Телеграм бот</LinkBot>
+                  <LinkBot
+                    href="https://t.me/ddg_stresser_bot?start=27"
+                    target="_blank"
+                  >
+                    Телеграм бот
+                  </LinkBot>
                 </ModalContent>
               </Modal>
             )}
