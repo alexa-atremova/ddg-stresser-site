@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LinkBot, LinkTelegram } from "../Header/styled";
+import { LinkBot } from "../Header/styled";
 import video from "./../../assets/gif.mp4";
 import logo from "./../../assets/logo.png";
 import {
@@ -8,6 +8,7 @@ import {
   Checkbox,
   CloseButton,
   CloseIcon,
+  LinkAuth,
   Modal,
   ModalContent,
   TermsButton,
@@ -35,6 +36,25 @@ const Main = () => {
   const [showAuth, setShowAuth] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
+  const [merchKey, setMerchKey] = useState("");
+  const [isValid, setIsValid] = useState(false);
+
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    if (inputValue.match(/^\d{1,19}:[A-Za-z0-9]{1,30}$/)) {
+      setIsValid(true);
+      setMerchKey(inputValue);
+    } else {
+      setIsValid(false);
+    }
+  };
+
+  const handleAuthClick = () => {
+    if (isValid) {
+      window.open(`https://webapp.ddg.lol/?key=${merchKey}`);
+    }
+  };
+
   const handleModal = () => {
     setShowModal(!showModal);
   };
@@ -57,8 +77,8 @@ const Main = () => {
               тестировку ваших ресурсов
             </Title>
             <Text>
-              DDG-Stresser-это телеграмм бот, который позволяет отправлять атаки
-              с использованием нашей мощной DDoS-сети с самыми передовыми
+              DDG-Stresser - это телеграмм бот, который позволяет отправлять
+              атаки с использованием нашей мощной DDoS-сети с самыми передовыми
               методами и самой высокой мощностью.
               <br />
               <br /> Мы предлагаем наиболее эффективные методы, делая его
@@ -153,20 +173,20 @@ const Main = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="checkwrap">
-                      <div className="checkAuth">
-                        <div className="box">
-                          <Checkbox
-                            type="checkbox"
-                            checked={isChecked}
-                            onChange={() => setIsChecked(!isChecked)}
-                          />
-                          <h2>Я прочёл условия обслуживания</h2>
-                        </div>
-                        <TermsButton disabled={!isChecked} onClick={handleAuth}>
-                          Ok
-                        </TermsButton>
+                  </div>
+                  <div className="checkwrap">
+                    <div className="checkAuth">
+                      <div className="box">
+                        <Checkbox
+                          type="checkbox"
+                          checked={isChecked}
+                          onChange={() => setIsChecked(!isChecked)}
+                        />
+                        <h2>Я прочёл условия обслуживания</h2>
                       </div>
+                      <TermsButton disabled={!isChecked} onClick={handleAuth}>
+                        Ok
+                      </TermsButton>
                     </div>
                   </div>
                 </TermsModalContent>
@@ -188,14 +208,22 @@ const Main = () => {
                   </div>
                   <AuthInput>
                     <h2>Введите merch-ключ:</h2>
-                    <input type="text" pattern="^[0-9]+:[A-Za-z0-9]+$" />
-
-                    <span className="error-message">
-                      Ключ введен неправильно
-                    </span>
+                    <input
+                      type="text"
+                      pattern="/^\d{1,19}:[A-Za-z0-9]{1,30}$/"
+                      required
+                      onChange={handleInputChange}
+                    />
+                    {!isValid && (
+                      <span className="error-message">
+                        Ключ введен неправильно
+                      </span>
+                    )}
                   </AuthInput>
                   <div className="btnAuth">
-                    <LinkTelegram>Авторизация</LinkTelegram>
+                    <LinkAuth onClick={handleAuthClick} disabled={!isValid}>
+                      Авторизация
+                    </LinkAuth>
                     <LinkBot href="https://example.com" target="_blank">
                       Телеграм Бот
                     </LinkBot>

@@ -35,11 +35,12 @@ export const AuthInput = styled.div`
   input {
     width: 537px;
     height: 42px;
-
+    padding: 0 20px;
+    font-size: 11px;
     border: 1px solid #eaeaea;
     border-radius: 5px;
   }
-  /* Стили для отображения ошибки */
+
   .error-message {
     color: red;
     font-size: 12px;
@@ -47,7 +48,6 @@ export const AuthInput = styled.div`
     display: none;
   }
 
-  /* Стили для отображения ошибки при невалидном вводе */
   input:invalid ~ .error-message {
     display: block;
   }
@@ -170,38 +170,6 @@ export const TermsModalContent = styled.div`
         }
       }
     }
-    .checkwrap {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
-      width: 100%;
-
-      .checkAuth {
-        width: 100%;
-        max-width: 680px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-direction: row;
-        .box {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: row;
-          h2 {
-            font-family: "Gill Sans";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 35px;
-            /* identical to box height, or 175% */
-
-            color: #414141;
-          }
-        }
-      }
-    }
 
     ::-webkit-scrollbar {
       width: 8px;
@@ -224,8 +192,64 @@ export const TermsModalContent = styled.div`
       background: #555; /* цвет ползунка */
     }
   }
-`;
+  .checkwrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%;
 
+    .checkAuth {
+      width: 100%;
+      max-width: 680px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        h2 {
+          font-family: "Gill Sans";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 35px;
+          /* identical to box height, or 175% */
+
+          color: #414141;
+        }
+      }
+    }
+  }
+`;
+export const LinkAuth = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 172px;
+  height: 49px;
+  background: linear-gradient(180deg, #64bcfc 0%, #3d99ed 100%);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 0px 10px;
+
+  font-family: "Gill Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+  /* identical to box height, or 194% */
+  text-decoration: none;
+  text-align: center;
+
+  color: #ffffff;
+  opacity: ${(props) => (props.disabled ? 0.5 : 1)};
+  background-color: transparent;
+
+  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+`;
 export const ButtonBot = styled.button`
   display: flex;
   align-items: center;
