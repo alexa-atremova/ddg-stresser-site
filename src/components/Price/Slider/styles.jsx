@@ -24,6 +24,36 @@ export const StyledSlidesCarousel = styled.div`
       }
     }
   }
+  @media (max-width: 1919px) {
+    max-width: 800px;
+    .desk {
+      .slick-list {
+        .slick-track {
+          min-height: 300px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1365px) {
+    max-width: 650px;
+    .desk {
+      .slick-list {
+        .slick-track {
+          min-height: 250px;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    max-width: 320px;
+    .desk {
+      .slick-list {
+        .slick-track {
+          min-height: 220px;
+        }
+      }
+    }
+  }
 `;
 export const StyledNextArrow = styled.div`
   z-index: 10;
@@ -41,8 +71,8 @@ export const StyledNextArrow = styled.div`
   ::before {
     display: none;
   }
-  @media (max-width: 1023px) {
-    right: -25px;
+  @media (max-width: 1919px) {
+    right: -50px;
     width: 20px;
     height: 20px;
     img {
@@ -51,14 +81,8 @@ export const StyledNextArrow = styled.div`
     }
   }
 
-  @media (max-width: 767px) {
-    right: -35px;
-    width: 30px;
-    height: 30px;
-    img {
-      width: 30px;
-      height: 30px;
-    }
+  @media (max-width: 1365px) {
+    display: none;
   }
 `;
 
@@ -78,8 +102,9 @@ export const StyledPrevArrow = styled.div`
   ::before {
     display: none;
   }
-  @media (max-width: 1023px) {
-    left: -25px;
+  @media (max-width: 1919px) {
+    left: -50px;
+
     width: 20px;
     height: 20px;
     img {
@@ -87,13 +112,7 @@ export const StyledPrevArrow = styled.div`
       height: 20px;
     }
   }
-  @media (max-width: 767px) {
-    left: -35px;
-    width: 30px;
-    height: 30px;
-    img {
-      width: 30px;
-      height: 30px;
-    }
+  @media (max-width: 1365px) {
+    display: none;
   }
 `;

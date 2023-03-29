@@ -21,7 +21,7 @@ function App() {
       <Main />
       <SecondBlock />
       <FAQ />
-      {/*  {/*<Price />*/}
+      <Price />
       <Footer />
     </AppConteiner>
   );

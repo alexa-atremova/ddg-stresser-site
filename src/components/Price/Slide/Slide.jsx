@@ -9,7 +9,7 @@ export default function Slide({ title, price, stress, metod, botnet }) {
         <div className="slideCard">
           <div className="title-wrap">
             <h1>{title}</h1>
-            <h2>{price} / 30 дней</h2>
+            <h2>{price}$ / 30 дней</h2>
           </div>
           <div className="text-wrap">
             <p>Максимальное время </p>

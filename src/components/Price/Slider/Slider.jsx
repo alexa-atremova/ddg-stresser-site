@@ -42,7 +42,7 @@ export default function SlidesCarousel() {
     prevArrow: <PrevArrow />,
     responsive: [
       {
-        breakpoint: 1367,
+        breakpoint: 1365,
         settings: {
           slidesToShow: 3,
         },
@@ -71,13 +71,6 @@ export default function SlidesCarousel() {
   return (
     <StyledSlidesCarousel data-aos="zoom-in">
       <Slider {...settings} className="desk">
-        <Slide
-          title={"⚡️ L7 + Telegram v1"}
-          price={"100"}
-          stress={"3600"}
-          metod={"7"}
-          botnet={"TG-Botnet:✅"}
-        />
         <Slide
           title={"🌐 Еxp. 3"}
           price={"125"}
@@ -139,6 +132,13 @@ export default function SlidesCarousel() {
           price={"4000"}
           stress={"10800"}
           metod={"27/81"}
+          botnet={"TG-Botnet:✅"}
+        />
+        <Slide
+          title={"⚡️ L7 + Telegram v1"}
+          price={"100"}
+          stress={"3600"}
+          metod={"7"}
           botnet={"TG-Botnet:✅"}
         />
       </Slider>

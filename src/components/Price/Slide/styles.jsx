@@ -83,6 +83,64 @@ export const StyledSlide = styled.div`
       }
     }
   }
+  @media (max-width: 1919px) {
+    .slideCard {
+      width: 249px;
+      height: 252px;
+      gap: 20px;
+      .title-wrap {
+        gap: 30px;
+
+        h1 {
+          width: 174px;
+          height: 41px;
+
+          font-size: 14.2292px;
+          line-height: 25px;
+        }
+        h2 {
+          font-size: 22px;
+          line-height: 25px;
+        }
+      }
+      .text-wrap {
+        gap: 5px;
+        p {
+          font-size: 14px;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1365px) {
+    .slideCard {
+      width: 201px;
+      height: 203px;
+      gap: 10px;
+      .title-wrap {
+        gap: 15px;
+
+        h1 {
+          width: 144px;
+          height: 35px;
+
+          font-size: 12px;
+          line-height: 20px;
+        }
+        h2 {
+          font-size: 18px;
+          line-height: 20px;
+        }
+      }
+      .text-wrap {
+        gap: 5px;
+        p {
+          font-size: 11.3153px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
 `;
 export const StyledNextArrow = styled.div`
   display: flex;
