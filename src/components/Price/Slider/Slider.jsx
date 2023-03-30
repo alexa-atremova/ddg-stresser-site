@@ -81,9 +81,9 @@ export default function SlidesCarousel({ lang }) {
     <StyledSlidesCarousel data-aos="zoom-in">
       {data ? (
         <Slider {...settings} className="desk">
-          {data.tariffs.map((tariff) => (
+          {data.tariffs.map((tariff, index) => (
             <Slide
-              key={tariff.name}
+              key={index.toString()}
               name={tariff.name}
               term_price={tariff.term_price}
               term_days={tariff.term_days}
