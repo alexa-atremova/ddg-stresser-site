@@ -140,8 +140,8 @@ const Main = ({ lang }) => {
                         </h2>
                         <p>
                           {lang === "ru"
-                            ? "Используя услуги стресс-тестирования сервера, предоставляемые Cryptostresser.com, вы соглашаетесь нести ответственность за все действия и последствия."
-                            : "By using the server stress testing services provided by Cryptostresser.com, you agree to be responsible for all actions and consequences."}
+                            ? "Используя услуги стресс-тестирования сервера, предоставляемые DDG-STRESSER, вы соглашаетесь нести ответственность за все действия и последствия."
+                            : "By using the server stress testing services provided by DDG-STRESSER, you agree to be responsible for all actions and consequences."}
                         </p>
                       </div>
                       <div className="terms-list">

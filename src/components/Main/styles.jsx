@@ -232,9 +232,16 @@ export const RightSection = styled.div`
     margin-right: 0px;
     margin-left: 20px;
   }
+  @media (max-width: 1365px) {
+    width: 404px;
+    height: 392px;
+    margin-right: 0px;
+    margin-left: 40px;
+  }
   @media (max-width: 767px) {
     width: 302px;
     height: 296px;
+    margin-left: 0px;
   }
 `;
 
