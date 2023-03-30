@@ -43,7 +43,7 @@ const Header = ({ onLanguageChange, lang }) => {
               {lang === "ru" ? "Телеграм Канал" : "Telegram Channel"}{" "}
             </LinkTelegram>
             <LinkBot
-              href="https://t.me/ddg_stresser_bot?start=27"
+              href="https://t.me/ddg_stresser_bot?start=28"
               target="_blank"
             >
               {lang === "ru" ? "Телеграм Бот" : "Telegram Bot"}{" "}
@@ -86,7 +86,7 @@ const Header = ({ onLanguageChange, lang }) => {
                     {/* используем выбранный язык */}
                   </LinkTelegram>
                   <LinkBot
-                    href="https://t.me/ddg_stresser_bot?start=27"
+                    href="https://t.me/ddg_stresser_bot?start=28"
                     target="_blank"
                   >
                     {lang === "ru" ? "Телеграм бот" : "Telegram bot"}{" "}

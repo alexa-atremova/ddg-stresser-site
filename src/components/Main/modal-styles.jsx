@@ -278,9 +278,43 @@ export const TermsModalContent = styled.div`
   }
   @media (max-width: 1365px) {
     .wrapp {
-      width: 700px;
-      padding: 30px;
+      width: 600px;
+      padding: 20px;
       margin-bottom: 30px;
+      .text-terms {
+        gap: 10px;
+        h1 {
+          font-size: 23px;
+          line-height: 35px;
+        }
+        .terms-list {
+          h2 {
+            font-size: 20px;
+            line-height: 20px;
+          }
+          p {
+            width: 580px;
+
+            font-size: 20px;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+    .checkwrap {
+      margin-bottom: 10px;
+
+      .checkAuth {
+        width: 100%;
+        max-width: 580px;
+
+        .box {
+          h2 {
+            font-size: 20px;
+            line-height: 35px;
+          }
+        }
+      }
     }
   }
   @media (max-width: 767px) {

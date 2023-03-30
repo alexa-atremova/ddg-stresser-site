@@ -17,7 +17,7 @@ const Price = ({ lang }) => {
           : "Find out how much it will cost to use our stresser in Telegram. We offer a transparent and flexible pricing policy that allows you to choose the best option for your business."}
       </Text>
       <SlidesCarousel lang={lang} />
-      <a href="https://t.me/ddg_stresser_bot?start=27" target="_blank">
+      <a href="https://t.me/ddg_stresser_bot?start=28" target="_blank">
         <Button>{lang === "ru" ? "Приобрести тариф" : "Buy Plan"}</Button>
       </a>
     </PriceContainer>

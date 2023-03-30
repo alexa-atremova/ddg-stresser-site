@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Slide from "../Slide/Slide";
+import { StyledSlide } from "../Slide/styles";
 
 import left from "./../../../assets/SliderImg/left.png";
 import right from "./../../../assets/SliderImg/right.png";
@@ -12,13 +13,17 @@ import {
 } from "./styles";
 
 export default function SlidesCarousel({ lang }) {
-  const [data, setData] = useState(null);
+  const [tariffs, setTariffs] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://api.ddg.lol/api/tariff/available")
-      .then((response) => setData(response.data))
-      .catch((error) => console.log(error));
+      .get("https://api.ddg.lol/api/tariff/available")
+      .then((response) => {
+        setTariffs(response.data.tariffs);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   }, []);
 
   function NextArrow(props) {
@@ -71,25 +76,38 @@ export default function SlidesCarousel({ lang }) {
       },
     ],
   };
+
   return (
     <StyledSlidesCarousel data-aos="zoom-in">
-      {data ? (
+      {tariffs.length > 0 ? (
         <Slider {...settings} className="desk">
-          {data.tariffs.map((tariff) => (
-            <Slide
-              key={tariff.name}
-              name={tariff.name}
-              term_price={tariff.term_price}
-              term_days={tariff.term_days}
-              methods_available={tariff.methods_available}
-              methods_all={tariff.methods_all}
-              concurrents={tariff.concurrents}
-              lang={lang}
-            />
+          {tariffs.map((tariff) => (
+            <StyledSlide key={tariff.name}>
+              <div className="slideCard">
+                <div className="title-wrap">
+                  <h1>{tariff.name}</h1>
+                  <h2>
+                    {tariff.term_price}$ / {tariff.term_days}{" "}
+                    {lang === "ru" ? "дней" : "days"}
+                  </h2>
+                </div>
+                <div className="text-wrap">
+                  <p>
+                    {lang === "ru" ? "Методы" : "Methods"}:{" "}
+                    {tariff.methods_available}/{tariff.methods_all}
+                  </p>
+                  <p>
+                    {" "}
+                    {lang === "ru" ? "Конкуренты" : "Сoncurrents"}:{" "}
+                    {tariff.concurrents}
+                  </p>
+                </div>
+              </div>
+            </StyledSlide>
           ))}
         </Slider>
       ) : (
-        <div>Loading</div>
+        <p>Loading...</p>
       )}
     </StyledSlidesCarousel>
   );

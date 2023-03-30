@@ -17,7 +17,7 @@ const Footer = ({ lang }) => {
           {lang === "ru" ? "Телеграм Канал" : "Telegram Channel"}{" "}
           {/* используем выбранный язык */}
         </LinkTelegram>
-        <LinkBot href="https://t.me/ddg_stresser_bot?start=27" target="_blank">
+        <LinkBot href="https://t.me/ddg_stresser_bot?start=28" target="_blank">
           {lang === "ru" ? "Телеграм Бот" : "Telegram Bot"}{" "}
           {/* используем выбранный язык */}
         </LinkBot>
