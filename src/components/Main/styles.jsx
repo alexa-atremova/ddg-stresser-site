@@ -26,7 +26,7 @@ export const MainContainer = styled.main`
   }
   @media (max-width: 767px) {
     background-position: -450px 0%;
-    height: 1640px;
+    height: 1440px;
   }
 `;
 export const Wrapper = styled.div`

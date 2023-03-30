@@ -6,7 +6,9 @@ export const StyledFAQ = styled.section`
   align-items: center;
   justify-content: center;
   background: #fcfbfc;
+  overflow: hidden;
   .wrapper {
+    position: relative;
     width: 100%;
     max-width: 950px;
     margin-top: 100px;
@@ -15,12 +17,55 @@ export const StyledFAQ = styled.section`
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1;
     @media (max-width: 1919px) {
       margin-top: 50px;
       max-width: 675px;
     }
     @media (max-width: 767px) {
       max-width: 320px;
+    }
+    .backimg3 {
+      position: absolute;
+      width: 252.45px;
+      height: 234.3px;
+      left: -340px;
+      bottom: 103px;
+      z-index: -1;
+      @media (max-width: 1365px) {
+        width: 179.61px;
+        height: 166.5px;
+        left: -73px;
+        bottom: 126px;
+      }
+      @media (max-width: 767px) {
+        width: 179.61px;
+        height: 166.5px;
+        left: -30px;
+        bottom: 126px;
+      }
+    }
+
+    .backimg4 {
+      position: absolute;
+      width: 689.46px;
+      height: 514.44px;
+      left: 241px;
+      bottom: -67px;
+      z-index: -1;
+      @media (max-width: 1365px) {
+        width: 352.53px;
+        height: 263.02px;
+        left: 406px;
+        bottom: 72px;
+      }
+      @media (max-width: 767px) {
+        width: 224.11px;
+        height: 167.21px;
+
+        left: 152px;
+        bottom: 126px;
+      }
     }
     .text {
       display: flex;

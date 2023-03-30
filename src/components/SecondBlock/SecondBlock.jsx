@@ -21,7 +21,7 @@ import {
 } from "./styles";
 import SecondBlockSlider from "./SecondBlockSlider/SecondBlockSlider";
 
-const SecondBlock = () => {
+const SecondBlock = ({ lang }) => {
   return (
     <BlockContainer>
       <BlockWrapper>
@@ -31,13 +31,15 @@ const SecondBlock = () => {
             <img src={Imgs} alt="" />
           </BlockLeftSection>
           <BlockRightSection>
-            <Title>Преимущества DDG STRESSER</Title>
+            <Title>
+              {lang === "ru"
+                ? "Преимущества DDG STRESSER"
+                : "Advantages of DDG STRESSER"}
+            </Title>
             <Text>
-              Наш настраиваемый концентратор атак стрессеров позволяет вам
-              обойти пользовательские правила блокировки DDOS-атак, и это
-              поможет достичь вашей цели с большей уверенностью. С нашим
-              концентратором вы можете использовать пользовательские настройки
-              для обхода любой цели, даже если у них есть блокировка DDOS-атак.
+              {lang === "ru"
+                ? "Наш настраиваемый концентратор атак стрессеров позволяет вам обойти пользовательские правила блокировки DDOS-атак, и это поможет достичь вашей цели с большей уверенностью. С нашим концентратором вы можете использовать пользовательские настройки для обхода любой цели, даже если у них есть блокировка DDOS-атак."
+                : "Our customizable stresser attack hub allows you to bypass custom DDOS attack blocking rules, and this will help you achieve your goals with greater confidence. With our hub, you can use custom settings to bypass any target, even if they have DDOS attack blocking."}
             </Text>
             <img className="backimg2" src={images2} alt="" />
           </BlockRightSection>
@@ -45,39 +47,57 @@ const SecondBlock = () => {
         <BlockBottomSection>
           <BlockWrapBlock>
             <img src={Imgs1} alt="" />
-            <BlockTitle>Безопасная оплата</BlockTitle>
+            <BlockTitle>
+              {lang === "ru" ? "Безопасная оплата" : "Secure payment"}
+            </BlockTitle>
             <BlockText>
-              Мы обрабатываем все ваши платежи криптовалютой с нашими
-              собственными узлами, чтобы обеспечить 100% анонимность.
+              {lang === "ru"
+                ? "Мы обрабатываем все ваши платежи криптовалютой с нашими собственными узлами, чтобы обеспечить 100% анонимность."
+                : "We process all your cryptocurrency payments with our own nodes to provide 100% anonymity."}
             </BlockText>
           </BlockWrapBlock>
           <BlockWrapBlock>
             <img src={Imgs2} alt="" />
-            <BlockTitle>Ваша безопасность важна для нас</BlockTitle>
+            <BlockTitle>
+              {lang === "ru"
+                ? "Ваша безопасность важна для нас"
+                : "Your security is important to us"}
+            </BlockTitle>
             <BlockText style={{ width: "350px" }}>
-              Стресс-тесты запускаются из нескольких мест и не могут
-              контролироваться. Ваша конфиденциальность в безопасности, никакие
-              журналы не хранятся, и все данные шифруются.
+              {lang === "ru"
+                ? "Стресс-тесты запускаются из нескольких мест и не могут контролироваться. Ваша конфиденциальность в безопасности, никакие журналы не хранятся, и все данные шифруются."
+                : "Stress tests are launched from multiple locations and cannot be controlled. Your privacy is secure, no logs are stored, and all data is encrypted."}
             </BlockText>
           </BlockWrapBlock>
           <BlockWrapBlock>
             <img src={Imgs3} alt="" />
-            <BlockTitle>Современные методы атаки</BlockTitle>
+            <BlockTitle>
+              {lang === "ru"
+                ? "Современные методы атаки"
+                : "Modern attack methods"}
+            </BlockTitle>
             <BlockText>
-              Наша поддержка здесь, чтобы помочь вам, если вам что-то нужно, вы
-              можете связаться с нами.
+              {lang === "ru"
+                ? "Наша поддержка здесь, чтобы помочь вам, если вам что-то нужно, вы можете связаться с нами."
+                : "Our support is here to help you, if you need anything, you can contact us."}
             </BlockText>
           </BlockWrapBlock>
           <BlockWrapBlock>
             <img src={Imgs4} alt="" />
-            <BlockTitle>Служба поддержки с вами 24/7</BlockTitle>
+            <BlockTitle>
+              {" "}
+              {lang === "ru"
+                ? "Служба поддержки с вами 24/7"
+                : "Support team available 24/7"}
+            </BlockTitle>
             <BlockText>
-              Наши методы ddos-атак способны обходить новейшие средства защиты,
-              и наши инженеры постоянно совершенствуют их.
+              {lang === "ru"
+                ? "Наши методы ddos-атак способны обходить новейшие средства защиты, и наши инженеры постоянно совершенствуют их."
+                : "Our ddos attack methods are able to bypass the latest protections,and our engineers are constantly improving them."}
             </BlockText>
           </BlockWrapBlock>
         </BlockBottomSection>
-        <SecondBlockSlider />
+        <SecondBlockSlider lang={lang} />
       </BlockWrapper>
     </BlockContainer>
   );

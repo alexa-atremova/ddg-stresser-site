@@ -3,15 +3,15 @@ import Slider from "react-slick";
 import {
   SliderBlockText,
   SliderBlockTitle,
-  SliderStyledSlidesCarousel,
   SliderWrapBlock,
+  SliderStyledSlidesCarousel,
 } from "./styles";
 import Imgs1 from "./../../../assets/1.png";
 import Imgs2 from "./../../../assets/2.png";
 import Imgs3 from "./../../../assets/3.png";
 import Imgs4 from "./../../../assets/4.png";
 
-export default function SecondBlockSlider() {
+export default function SecondBlockSlider({ lang }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -28,36 +28,54 @@ export default function SecondBlockSlider() {
     <SliderStyledSlidesCarousel data-aos="zoom-in">
       <Slider {...settings} className="desk">
         <SliderWrapBlock>
-          <img classname="blockImg" src={Imgs1} alt="" />
-          <SliderBlockTitle>Безопасная оплата</SliderBlockTitle>
+          <img src={Imgs1} alt="" />
+          <SliderBlockTitle>
+            {lang === "ru" ? "Безопасная оплата" : "Secure payment"}
+          </SliderBlockTitle>
           <SliderBlockText>
-            Мы обрабатываем все ваши платежи криптовалютой с нашими собственными
-            узлами, чтобы обеспечить 100% анонимность.
+            {lang === "ru"
+              ? "Мы обрабатываем все ваши платежи криптовалютой с нашими собственными узлами, чтобы обеспечить 100% анонимность."
+              : "We process all your cryptocurrency payments with our own nodes to provide 100% anonymity."}
           </SliderBlockText>
         </SliderWrapBlock>
         <SliderWrapBlock>
-          <img classname="blockImg" src={Imgs2} alt="" />
-          <SliderBlockTitle>Ваша безопасность важна для нас</SliderBlockTitle>
+          <img src={Imgs2} alt="" />
+          <SliderBlockTitle>
+            {lang === "ru"
+              ? "Ваша безопасность важна для нас"
+              : "Your security is important to us"}
+          </SliderBlockTitle>
           <SliderBlockText style={{ width: "350px" }}>
-            Стресс-тесты запускаются из нескольких мест и не могут
-            контролироваться. Ваша конфиденциальность в безопасности, никакие
-            журналы не хранятся, и все данные шифруются.
+            {lang === "ru"
+              ? "Стресс-тесты запускаются из нескольких мест и не могут контролироваться. Ваша конфиденциальность в безопасности, никакие журналы не хранятся, и все данные шифруются."
+              : "Stress tests are launched from multiple locations and cannot be controlled. Your privacy is secure, no logs are stored, and all data is encrypted."}
           </SliderBlockText>
         </SliderWrapBlock>
         <SliderWrapBlock>
-          <img classname="blockImg" src={Imgs3} alt="" />
-          <SliderBlockTitle>Современные методы атаки</SliderBlockTitle>
+          <img src={Imgs3} alt="" />
+          <SliderBlockTitle>
+            {lang === "ru"
+              ? "Современные методы атаки"
+              : "Modern attack methods"}
+          </SliderBlockTitle>
           <SliderBlockText>
-            Наша поддержка здесь, чтобы помочь вам, если вам что-то нужно, вы
-            можете связаться с нами.
+            {lang === "ru"
+              ? "Наша поддержка здесь, чтобы помочь вам, если вам что-то нужно, вы можете связаться с нами."
+              : "Our support is here to help you, if you need anything, you can contact us."}
           </SliderBlockText>
         </SliderWrapBlock>
         <SliderWrapBlock>
-          <img classname="blockImg" src={Imgs4} alt="" />
-          <SliderBlockTitle>Служба поддержки с вами 24/7</SliderBlockTitle>
+          <img src={Imgs4} alt="" />
+          <SliderBlockTitle>
+            {" "}
+            {lang === "ru"
+              ? "Служба поддержки с вами 24/7"
+              : "Support team available 24/7"}
+          </SliderBlockTitle>
           <SliderBlockText>
-            Наши методы ddos-атак способны обходить новейшие средства защиты, и
-            наши инженеры постоянно совершенствуют их.
+            {lang === "ru"
+              ? "Наши методы ddos-атак способны обходить новейшие средства защиты, и наши инженеры постоянно совершенствуют их."
+              : "Our ddos attack methods are able to bypass the latest protections,and our engineers are constantly improving them."}
           </SliderBlockText>
         </SliderWrapBlock>
       </Slider>

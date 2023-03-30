@@ -313,7 +313,9 @@ export const TermsButton = styled.button`
   padding: 8px 16px;
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
 `;
-
+export const Link = styled.a`
+  text-decoration: none;
+`;
 export const CloseButton = styled.button`
   position: absolute;
   top: 10px;

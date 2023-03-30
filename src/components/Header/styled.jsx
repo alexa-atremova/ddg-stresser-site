@@ -87,8 +87,65 @@ export const ButtonsContainer = styled.div`
   display: flex;
   align-items: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 5px;
+  .langButton,
+  .disableLang {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 5px;
+    margin-left: 10px;
+    gap: 5px;
+
+    width: 84px;
+    height: 45px;
+    background: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 10px;
+
+    font-family: "Avante Int";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #1b1b1b;
+    @media (max-width: 1365px) {
+      width: 67px;
+      height: 36px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @media (max-width: 1365px) {
+      width: 59px;
+      height: 31.5px;
+      font-size: 14px;
+      line-height: 17px;
+      margin-left: 0px;
+    }
+  }
+  .langImg {
+    width: 25px;
+    height: 25px;
+    @media (max-width: 1365px) {
+      width: 20px;
+      height: 20px;
+    }
+    @media (max-width: 1365px) {
+      width: 17px;
+      height: 17px;
+    }
+  }
+  .disableLang {
+    color: #787878;
+    .langImg {
+      opacity: 0.5;
+      filter: grayscale(1);
+    }
+  }
 `;
+
 export const LinkBot = styled.a`
   display: flex;
   align-items: center;

@@ -226,7 +226,8 @@ export const BlockWrapBlock = styled.div`
   margin: 0;
   gap: 10px;
   @media (max-width: 1919px) {
-    width: 292.86px;
+    width: 260px;
+
     img {
       width: 70.32px;
       height: 70.32px;
@@ -271,7 +272,7 @@ export const BlockText = styled.p`
   color: #1b1b1b;
   @media (max-width: 1919px) {
     width: 100%;
-    max-width: 300px;
+    max-width: 270px;
     font-size: 14.891px;
     line-height: 17px;
   }

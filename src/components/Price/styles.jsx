@@ -9,6 +9,7 @@ export const PriceContainer = styled.div`
   width: 100%;
   height: 895px;
   gap: 30px;
+  overflow: hidden;
   @media (max-width: 1919px) {
     gap: 30px;
     margin-top: 50px;
@@ -50,6 +51,7 @@ export const Button = styled.a`
   }
 `;
 export const Text = styled.h2`
+  position: relative;
   width: 794px;
   font-family: "Gill Sans";
   font-style: normal;
@@ -71,6 +73,49 @@ export const Text = styled.h2`
     font-size: 16px;
     line-height: 25px;
   }
+  .backimg5 {
+    position: absolute;
+    width: 168.34px;
+    height: 140.46px;
+    left: -315px;
+    top: 208px;
+    z-index: 1;
+    @media (max-width: 1365px) {
+      width: 150px;
+      height: 154.93px;
+      left: -103px;
+      top: 209px;
+      z-index: -1;
+    }
+    @media (max-width: 767px) {
+      width: 100px;
+      height: 93.39px;
+      left: -30px;
+      top: 120px;
+    }
+  }
+
+  .backimg6 {
+    position: absolute;
+    width: 268.23px;
+    height: 278.95px;
+    left: 751px;
+    top: -37px;
+    z-index: 1;
+    @media (max-width: 1365px) {
+      width: 290.76px;
+      height: 298.34px;
+      left: 508px;
+      top: 123px;
+      z-index: -1;
+    }
+    @media (max-width: 767px) {
+      width: 134.39px;
+      height: 139.73px;
+      left: 238px;
+      top: 174px;
+    }
+  }
 `;
 
 export const Title = styled.p`
@@ -84,6 +129,7 @@ export const Title = styled.p`
   /* identical to box height, or 162% */
 
   color: #1b1b1b;
+
   @media (max-width: 1919px) {
     text-align: center;
     width: 479px;

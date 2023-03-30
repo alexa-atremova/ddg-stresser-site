@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import FAQ from "./components/FAQ/FAQ";
 import SecondBlock from "./components/SecondBlock/SecondBlock";
 import Price from "./components/Price/Price";
+import { useState } from "react";
 
 export const AppConteiner = styled.div`
   width: 100%;
@@ -14,15 +15,20 @@ export const AppConteiner = styled.div`
 `;
 
 function App() {
+  const [lang, setLang] = useState("ru");
+
+  function handleLanguageChange(lang) {
+    setLang(lang);
+  }
   return (
     <AppConteiner>
       <GlobalStyle />
-      <Header />
-      <Main />
-      <SecondBlock />
-      <FAQ />
-      <Price />
-      <Footer />
+      <Header onLanguageChange={handleLanguageChange} lang={lang} />
+      <Main lang={lang} />
+      <SecondBlock lang={lang} />
+      <FAQ lang={lang} />
+      <Price lang={lang} />
+      <Footer lang={lang} />
     </AppConteiner>
   );
 }

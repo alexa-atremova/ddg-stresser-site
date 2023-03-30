@@ -26,7 +26,7 @@ import {
 } from "./menu-styles";
 import arrow_img2 from "./../../assets/arrow_img2.png";
 
-const Header = () => {
+const Header = ({ onLanguageChange, lang }) => {
   const [showModal, setShowModal] = useState(false);
 
   const handleModal = () => {
@@ -40,24 +40,30 @@ const Header = () => {
         <Container>
           <LinksContainer>
             <LinkTelegram href="https://t.me/ddg_stresser" target="_blank">
-              Телеграм Канал
+              {lang === "ru" ? "Телеграм Канал" : "Telegram Channel"}{" "}
             </LinkTelegram>
             <LinkBot
               href="https://t.me/ddg_stresser_bot?start=27"
               target="_blank"
             >
-              Телеграм Бот
+              {lang === "ru" ? "Телеграм Бот" : "Telegram Bot"}{" "}
             </LinkBot>
           </LinksContainer>
           <ButtonsContainer>
-            <LanguageButton>
-              <LanguageIcon src={ru} />
+            <button
+              className={lang === "ru" ? "langButton" : "disableLang"}
+              onClick={() => onLanguageChange("ru")}
+            >
+              <img className="langImg" src={ru} />
               Рус
-            </LanguageButton>
-            <LanguageButton>
-              <LanguageIcon src={eng} />
+            </button>
+            <button
+              className={lang === "en" ? "langButton" : "disableLang"}
+              onClick={() => onLanguageChange("en")}
+            >
+              <img className={"langImg"} src={eng} />
               Eng
-            </LanguageButton>
+            </button>
           </ButtonsContainer>
           <Menu>
             <HamburgerMenuButton onClick={handleModal}>
@@ -75,12 +81,16 @@ const Header = () => {
                   <CloseButton onClick={handleModal}>
                     <CloseIcon />
                   </CloseButton>
-                  <LinkTelegram href="#">Авторизоваться</LinkTelegram>
+                  <LinkTelegram href="#">
+                    {lang === "ru" ? "Авторизоваться" : "Sign in"}{" "}
+                    {/* используем выбранный язык */}
+                  </LinkTelegram>
                   <LinkBot
                     href="https://t.me/ddg_stresser_bot?start=27"
                     target="_blank"
                   >
-                    Телеграм бот
+                    {lang === "ru" ? "Телеграм бот" : "Telegram bot"}{" "}
+                    {/* используем выбранный язык */}
                   </LinkBot>
                 </ModalContent>
               </Modal>
