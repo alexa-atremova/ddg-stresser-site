@@ -90,7 +90,7 @@ const Main = ({ lang }) => {
     setShowAuth(!showAuth);
   };
   function roundNumber(num) {
-    if (num >= 100000) {
+    if (num >= 10000) {
       return (num / 1000).toFixed(0) + "k";
     } else {
       return num;
@@ -303,7 +303,7 @@ const Main = ({ lang }) => {
         <BottomSection>
           <WrapBlock>
             <BlockTitle>
-              {">"}
+              {"> "}
               {data && <>{roundNumber(data.users)}</>}
             </BlockTitle>
             <BlockText>
@@ -317,7 +317,7 @@ const Main = ({ lang }) => {
               {">"} {data && <>{data.days}</>}
               {lang === "ru" ? " дней" : "days"}
             </BlockTitle>
-            <BlockText>Online</BlockText>
+            <BlockText>{lang === "ru" ? " Онлайн" : "Online"}</BlockText>
           </WrapBlock>
           <WrapBlock>
             <BlockTitle style={{ color: " #FBC12E" }}>
