@@ -50,9 +50,15 @@ export const StyledFAQ = styled.section`
       position: absolute;
       width: 689.46px;
       height: 514.44px;
-      left: 241px;
-      bottom: -67px;
+      left: 519px;
+      bottom: -36px;
       z-index: -1;
+      @media (max-width: 1919px) {
+        width: 689.46px;
+        height: 514.44px;
+        left: 270px;
+        bottom: -70px;
+      }
       @media (max-width: 1365px) {
         width: 352.53px;
         height: 263.02px;
@@ -101,16 +107,33 @@ export const StyledFAQ = styled.section`
           background-color: #eaeaea;
         } */
         @media (max-width: 1919px) {
-          height: 45px;
+          height: 60px;
           font-size: 35px;
           line-height: 45px;
         }
         @media (max-width: 767px) {
           width: 320px;
-          height: 90px;
+          height: 110px;
           font-size: 28px;
           line-height: 45px;
           text-align: center;
+        }
+        ::after {
+          content: "";
+          margin-top: 20px;
+          display: block;
+          align-self: center;
+          margin-left: 150px;
+          width: 250px;
+          height: 3px;
+
+          background-color: #eaeaea;
+          @media (max-width: 1919px) {
+            margin-left: 120px;
+          }
+          @media (max-width: 767px) {
+            margin-left: 40px;
+          }
         }
       }
       p {

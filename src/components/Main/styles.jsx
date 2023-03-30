@@ -26,7 +26,7 @@ export const MainContainer = styled.main`
   }
   @media (max-width: 767px) {
     background-position: -450px 0%;
-    height: 1440px;
+    height: 1500px;
   }
 `;
 export const Wrapper = styled.div`
@@ -89,7 +89,7 @@ export const Title = styled.h1`
   color: #1b1b1b;
 
   width: 670px;
-  /* ::after {
+  ::after {
     content: "";
     margin-top: 20px;
     display: block;
@@ -98,7 +98,11 @@ export const Title = styled.h1`
     height: 3px;
 
     background-color: #eaeaea;
-  } */
+
+    @media (max-width: 767px) {
+      margin-left: 40px;
+    }
+  }
   @media (max-width: 1919px) {
     font-size: 28px;
     line-height: 40px;

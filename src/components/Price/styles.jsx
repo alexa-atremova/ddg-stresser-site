@@ -77,9 +77,16 @@ export const Text = styled.h2`
     position: absolute;
     width: 168.34px;
     height: 140.46px;
-    left: -315px;
+    left: -392px;
     top: 208px;
     z-index: 1;
+    @media (max-width: 1919px) {
+      width: 168.34px;
+      height: 140.46px;
+      left: -333px;
+      top: 166px;
+      z-index: 1;
+    }
     @media (max-width: 1365px) {
       width: 150px;
       height: 154.93px;
@@ -99,9 +106,17 @@ export const Text = styled.h2`
     position: absolute;
     width: 268.23px;
     height: 278.95px;
-    left: 751px;
-    top: -37px;
+    left: 984px;
+    top: 9px;
     z-index: 1;
+    @media (max-width: 1919px) {
+      position: absolute;
+      width: 268.23px;
+      height: 278.95px;
+      left: 725px;
+      top: -40px;
+      z-index: 1;
+    }
     @media (max-width: 1365px) {
       width: 290.76px;
       height: 298.34px;
@@ -129,7 +144,23 @@ export const Title = styled.p`
   /* identical to box height, or 162% */
 
   color: #1b1b1b;
+  ::after {
+    content: "";
+    margin-top: 20px;
+    display: block;
+    align-self: center;
+    margin-left: 60px;
+    width: 250px;
+    height: 3px;
 
+    background-color: #eaeaea;
+    @media (max-width: 1919px) {
+      margin-left: 120px;
+    }
+    @media (max-width: 767px) {
+      margin-left: 40px;
+    }
+  }
   @media (max-width: 1919px) {
     text-align: center;
     width: 479px;

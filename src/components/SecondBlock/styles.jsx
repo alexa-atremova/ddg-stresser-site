@@ -114,7 +114,7 @@ export const Title = styled.h1`
   color: #1b1b1b;
 
   width: 574px;
-  /* ::after {
+  ::after {
     content: "";
     margin-top: 20px;
     display: block;
@@ -123,7 +123,11 @@ export const Title = styled.h1`
     height: 3px;
 
     background-color: #eaeaea;
-  } */
+    @media (max-width: 767px) {
+      width: 200px;
+      margin-left: 60px;
+    }
+  }
   @media (max-width: 1919px) {
     width: 502px;
     font-size: 35px;
@@ -133,7 +137,7 @@ export const Title = styled.h1`
     display: flex;
     align-self: center;
     width: 320px;
-    height: 110px;
+    height: 140px;
     font-size: 28px;
     line-height: 55px;
     text-align: center;
