@@ -51,6 +51,21 @@ export const AuthInput = styled.div`
   input:invalid ~ .error-message {
     display: block;
   }
+  @media (max-width: 1365px) {
+    input {
+      width: 400px;
+      height: 42px;
+    }
+  }
+  @media (max-width: 768px) {
+    h2 {
+      font-size: 15px;
+    }
+    input {
+      width: 280px;
+      height: 42px;
+    }
+  }
 `;
 
 export const ModalContent = styled.div`
@@ -111,6 +126,43 @@ export const ModalContent = styled.div`
     flex-direction: row;
     gap: 10px;
     padding-bottom: 30px;
+  }
+  @media (max-width: 1365px) {
+    width: 500px;
+    .text {
+      h1 {
+        width: 178px;
+
+        font-size: 26px;
+        line-height: 35px;
+      }
+      p {
+        width: 450px;
+
+        font-size: 22px;
+        line-height: 35px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    width: 300px;
+    .text {
+      h1 {
+        width: 178px;
+
+        font-size: 20px;
+        line-height: 25px;
+      }
+      p {
+        width: 290px;
+
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .btnAuth {
+      flex-direction: column;
+    }
   }
 `;
 export const TermsModalContent = styled.div`
@@ -224,6 +276,56 @@ export const TermsModalContent = styled.div`
       }
     }
   }
+  @media (max-width: 1365px) {
+    .wrapp {
+      width: 700px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width: 767px) {
+    .wrapp {
+      width: 290px;
+      padding: 20px;
+      margin-bottom: 30px;
+
+      .text-terms {
+        gap: 10px;
+        h1 {
+          font-size: 19px;
+          line-height: 35px;
+        }
+        .terms-list {
+          h2 {
+            font-size: 17px;
+            line-height: 20px;
+          }
+          p {
+            width: 280px;
+
+            font-size: 16px;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+    .checkwrap {
+      margin-bottom: 10px;
+
+      .checkAuth {
+        width: 100%;
+        max-width: 280px;
+        flex-direction: column;
+
+        .box {
+          h2 {
+            font-size: 16px;
+            line-height: 35px;
+          }
+        }
+      }
+    }
+  }
 `;
 export const LinkAuth = styled.a`
   display: flex;
@@ -280,6 +382,16 @@ export const ButtonBot = styled.button`
     width: 47px;
     height: 47px;
   }
+  @media (max-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+    width: 220px;
+    height: 47px;
+    img {
+      width: 37px;
+      height: 37px;
+    }
+  }
 `;
 
 export const Checkbox = styled.input`
@@ -312,6 +424,12 @@ export const TermsButton = styled.button`
   background-color: transparent;
   padding: 8px 16px;
   cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
+  @media (max-width: 767px) {
+    width: 66px;
+    height: 39px;
+    font-size: 16px;
+    line-height: 20px;
+  }
 `;
 export const Link = styled.a`
   text-decoration: none;

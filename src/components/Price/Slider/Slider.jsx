@@ -69,21 +69,15 @@ export default function SlidesCarousel({ lang }) {
           slidesToShow: 1,
         },
       },
-      {
-        breakpoint: 533,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
     ],
   };
   return (
     <StyledSlidesCarousel data-aos="zoom-in">
       {data ? (
         <Slider {...settings} className="desk">
-          {data.tariffs.map((tariff, index) => (
+          {data.tariffs.map((tariff) => (
             <Slide
-              key={index.toString()}
+              key={tariff.name}
               name={tariff.name}
               term_price={tariff.term_price}
               term_days={tariff.term_days}
@@ -95,7 +89,7 @@ export default function SlidesCarousel({ lang }) {
           ))}
         </Slider>
       ) : (
-        <div></div>
+        <div>Loading</div>
       )}
     </StyledSlidesCarousel>
   );
