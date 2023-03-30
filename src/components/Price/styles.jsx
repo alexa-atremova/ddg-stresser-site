@@ -14,10 +14,19 @@ export const PriceContainer = styled.div`
     gap: 30px;
     margin-top: 50px;
     height: 850px;
-    @media (max-width: 767px) {
-      height: 582px;
-      gap: 10px;
-    }
+  }
+  @media (max-width: 1365px) {
+    gap: 30px;
+    margin-top: 50px;
+    height: 650px;
+  }
+  @media (max-width: 767px) {
+    height: 582px;
+    gap: 10px;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;
 
@@ -142,7 +151,7 @@ export const Title = styled.p`
   font-size: 40px;
   line-height: 65px;
   /* identical to box height, or 162% */
-
+  text-align: center;
   color: #1b1b1b;
   ::after {
     content: "";

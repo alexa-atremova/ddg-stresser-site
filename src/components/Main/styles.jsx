@@ -252,9 +252,11 @@ export const BottomSection = styled.div`
   flex-direction: row;
   gap: 19px;
   @media (max-width: 1919px) {
+    margin-top: 30px;
     gap: 15px;
   }
   @media (max-width: 1365px) {
+    margin-top: 0px;
     flex-wrap: wrap;
   }
 `;

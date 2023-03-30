@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import Slide from "../Slide/Slide";
 
@@ -10,7 +11,16 @@ import {
   StyledSlidesCarousel,
 } from "./styles";
 
-export default function SlidesCarousel() {
+export default function SlidesCarousel({ lang }) {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("http://api.ddg.lol/api/tariff/available")
+      .then((response) => setData(response.data))
+      .catch((error) => console.log(error));
+  }, []);
+
   function NextArrow(props) {
     const { className, onClick } = props;
     return (
@@ -67,81 +77,26 @@ export default function SlidesCarousel() {
       },
     ],
   };
-
   return (
     <StyledSlidesCarousel data-aos="zoom-in">
-      <Slider {...settings} className="desk">
-        <Slide
-          title={"🌐 Еxp. 3"}
-          price={"125"}
-          stress={"3600"}
-          metod={"26"}
-          botnet={"TG-Botnet:❌"}
-        />
-        <Slide
-          title={"🌐 Botnet exp1"}
-          price={"149"}
-          stress={"1200"}
-          metod={"29"}
-          botnet={"TG-Botnet:❌"}
-        />
-        <Slide
-          title={"Telegram ⚡️ exp. 2"}
-          price={"150"}
-          stress={"3600"}
-          metod={"1"}
-          botnet={"TG-Botnet:✅"}
-        />
-        <Slide
-          title={"🌐 Еxp. 4"}
-          price={"180"}
-          stress={"4500"}
-          metod={"27"}
-          botnet={"TG-Botnet:❌"}
-        />
-        <Slide
-          title={"🌐 Exp. 5"}
-          price={"250"}
-          stress={"7800"}
-          metod={"27"}
-          botnet={"TG-Botnet:❌"}
-        />
-        <Slide
-          title={"🌐 Еxp. 6"}
-          price={"450"}
-          stress={"10800"}
-          metod={"7"}
-          botnet={"TG-Botnet:❌"}
-        />
-        <Slide
-          title={"НЕ ДЛЯ НИЩИХ 🙈"}
-          price={"1250"}
-          stress={"10800"}
-          metod={"28"}
-          botnet={"TG-Botnet:✅"}
-        />
-        <Slide
-          title={"Not for beggars 🦈"}
-          price={"1500"}
-          stress={"10800"}
-          metod={"53/81"}
-          botnet={"TG-Botnet:❌"}
-        />
-        <Slide
-          title={"Zeus 👾"}
-          price={"4000"}
-          stress={"10800"}
-          metod={"27/81"}
-          botnet={"TG-Botnet:✅"}
-        />
-        <Slide
-          title={"⚡️ L7 + Telegram v1"}
-          price={"100"}
-          stress={"3600"}
-          metod={"7"}
-          botnet={"TG-Botnet:✅"}
-        />
-      </Slider>
+      {data ? (
+        <Slider {...settings} className="desk">
+          {data.tariffs.map((tariff) => (
+            <Slide
+              key={tariff.name}
+              name={tariff.name}
+              term_price={tariff.term_price}
+              term_days={tariff.term_days}
+              methods_available={tariff.methods_available}
+              methods_all={tariff.methods_all}
+              concurrents={tariff.concurrents}
+              lang={lang}
+            />
+          ))}
+        </Slider>
+      ) : (
+        <div></div>
+      )}
     </StyledSlidesCarousel>
   );
 }

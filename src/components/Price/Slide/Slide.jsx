@@ -1,29 +1,34 @@
 import React from "react";
 import { StyledSlide } from "./styles";
-// import social from "./../../../Assets/Team/Vector.png";
 
-export default function Slide({ title, price, stress, metod, botnet, lang }) {
+export default function Slide({
+  name,
+  term_price,
+  term_days,
+  concurrents,
+  methods_available,
+  methods_all,
+  lang,
+}) {
   return (
     <StyledSlide>
       <div>
         <div className="slideCard">
           <div className="title-wrap">
-            <h1>{title}</h1>
+            <h1>{name}</h1>
             <h2>
-              {price}$ / 30 {lang === "ru" ? "дней" : "days"}
+              {term_price}$ / {term_days} {lang === "ru" ? "дней" : "days"}
             </h2>
           </div>
           <div className="text-wrap">
             <p>
-              {lang === "ru"
-                ? "Максимальное время стресса"
-                : "Maximum stress time"}
-              : {stress} {lang === "ru" ? "сек" : "sec"}
+              {lang === "ru" ? "Методы" : "Methods"}: {methods_available}/
+              {methods_all}
             </p>
             <p>
-              {lang === "ru" ? "Методы" : "Methods"}: {metod}/81
+              {" "}
+              {lang === "ru" ? "Конкуренты" : "Сoncurrents"}: {concurrents}
             </p>
-            <p>{botnet}</p>
           </div>
         </div>
       </div>

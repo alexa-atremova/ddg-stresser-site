@@ -42,6 +42,7 @@ const Main = ({ lang }) => {
   const [isValid, setIsValid] = useState(false);
 
   const [data, setData] = useState(null);
+  const [canUseKey, setCanUseKey] = useState(false);
 
   useEffect(() => {
     axios
@@ -49,16 +50,27 @@ const Main = ({ lang }) => {
       .then((response) => setData(response.data))
       .catch((error) => console.log(error));
   }, []);
+  useEffect(() => {
+    setIsValid(canUseKey);
+  }, [canUseKey]);
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
     if (inputValue.match(/^\d{1,19}:[A-Za-z0-9]{1,30}$/)) {
-      setIsValid(true);
+      checkKey(inputValue);
+      setIsValid(canUseKey);
       setMerchKey(inputValue);
     } else {
       setIsValid(false);
     }
   };
+
+  function checkKey(key) {
+    axios
+      .get(`https://api.ddg.lol/api/validation/key?value=${key}`)
+      .then((response) => setCanUseKey(response.data.can_use))
+      .catch((error) => console.log(error));
+  }
 
   const handleAuthClick = () => {
     if (isValid) {
@@ -258,7 +270,7 @@ const Main = ({ lang }) => {
                       required
                       onChange={handleInputChange}
                     />
-                    {!isValid && (
+                    {!canUseKey && (
                       <span className="error-message">
                         {lang === "ru"
                           ? "Ключ введен неправильно"
@@ -267,7 +279,7 @@ const Main = ({ lang }) => {
                     )}
                   </AuthInput>
                   <div className="btnAuth">
-                    <LinkAuth onClick={handleAuthClick} disabled={!isValid}>
+                    <LinkAuth onClick={handleAuthClick} disabled={!canUseKey}>
                       {lang === "ru" ? "Авторизация" : "Authorization"}
                     </LinkAuth>
                     <LinkBot
@@ -308,7 +320,7 @@ const Main = ({ lang }) => {
             <BlockText>Online</BlockText>
           </WrapBlock>
           <WrapBlock>
-            <BlockTitle style={{ color: " #FBC12E;" }}>
+            <BlockTitle style={{ color: " #FBC12E" }}>
               {">"} {data && <>{roundNumber(data.tests)}</>}
             </BlockTitle>
             <BlockText>

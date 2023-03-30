@@ -20,7 +20,7 @@ export const StyledSlidesCarousel = styled.div`
       height: 100%;
 
       .slick-track {
-        min-height: 450px;
+        min-height: 400px;
       }
     }
   }
@@ -49,7 +49,7 @@ export const StyledSlidesCarousel = styled.div`
     .desk {
       .slick-list {
         .slick-track {
-          min-height: 220px;
+          min-height: 250px;
         }
       }
     }

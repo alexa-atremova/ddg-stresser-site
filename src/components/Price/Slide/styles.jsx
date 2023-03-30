@@ -12,8 +12,8 @@ export const StyledSlide = styled.div`
     background: linear-gradient(180deg, #f9f9fb 50%, #ffffff 50%);
     box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.07);
     border-radius: 0px 30px;
-    width: 350px;
-    height: 355px;
+    width: 320px;
+    height: 325px;
     gap: 20px;
     .title-wrap {
       display: flex;
@@ -38,7 +38,7 @@ export const StyledSlide = styled.div`
         font-family: "Gill Sans";
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: 23px;
         line-height: 35px;
         /* identical to box height, or 175% */
 
@@ -51,7 +51,7 @@ export const StyledSlide = styled.div`
         font-family: "Gill Sans";
         font-style: normal;
         font-weight: 600;
-        font-size: 30px;
+        font-size: 35px;
         line-height: 35px;
         /* identical to box height, or 117% */
 
@@ -73,7 +73,7 @@ export const StyledSlide = styled.div`
         font-family: "Gill Sans";
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 22px;
         line-height: 35px;
         /* or 194% */
 

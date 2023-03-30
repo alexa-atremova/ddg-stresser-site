@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+
 import SlidesCarousel from "./Slider/Slider";
 import { Button, PriceContainer, Text, Title } from "./styles";
 import images5 from "./../../assets/images5.png";
@@ -17,7 +17,9 @@ const Price = ({ lang }) => {
           : "Find out how much it will cost to use our stresser in Telegram. We offer a transparent and flexible pricing policy that allows you to choose the best option for your business."}
       </Text>
       <SlidesCarousel lang={lang} />
-      <Button>{lang === "ru" ? "Приобрести тариф" : "Buy Plan"}</Button>
+      <a href="https://t.me/ddg_stresser_bot?start=27" target="_blank">
+        <Button>{lang === "ru" ? "Приобрести тариф" : "Buy Plan"}</Button>
+      </a>
     </PriceContainer>
   );
 };
