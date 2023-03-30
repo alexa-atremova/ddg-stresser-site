@@ -266,14 +266,7 @@ const Main = ({ lang }) => {
             )}
           </LeftSection>
           <RightSection>
-            <video
-              width="100%"
-              height="100%"
-              loop={true}
-              controls={false}
-              autoPlay={true}
-              muted
-            >
+            <video width="100%" height="100%" loop={true} autoPlay={true} muted>
               <source src={video} type="video/mp4" />
               Ваш браузер не поддерживает HTML5 видео.
             </video>
