@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LinkBot } from "../Header/styled";
 import video from "./../../assets/gif.mp4";
 import logo from "./../../assets/logo.png";
@@ -30,6 +30,7 @@ import {
   Wrapper,
   ButtonSing,
 } from "./styles";
+import axios from "axios";
 
 const Main = ({ lang }) => {
   const [showModal, setShowModal] = useState(false);
@@ -39,6 +40,15 @@ const Main = ({ lang }) => {
 
   const [merchKey, setMerchKey] = useState("");
   const [isValid, setIsValid] = useState(false);
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("https://api.ddg.lol/api/stat/details")
+      .then((response) => setData(response.data))
+      .catch((error) => console.log(error));
+  }, []);
 
   const handleInputChange = (event) => {
     const inputValue = event.target.value;
@@ -67,7 +77,13 @@ const Main = ({ lang }) => {
     setShowTerms(false);
     setShowAuth(!showAuth);
   };
-
+  function roundNumber(num) {
+    if (num >= 100000) {
+      return (num / 1000).toFixed(0) + "k";
+    } else {
+      return num;
+    }
+  }
   return (
     <MainContainer>
       <Wrapper>
@@ -274,7 +290,10 @@ const Main = ({ lang }) => {
         </TopSection>
         <BottomSection>
           <WrapBlock>
-            <BlockTitle>{lang === "ru" ? ">" : ">"}20k</BlockTitle>
+            <BlockTitle>
+              {">"}
+              {data && <>{roundNumber(data.users)}</>}
+            </BlockTitle>
             <BlockText>
               {lang === "ru"
                 ? "Зарегистрированных пользователей"
@@ -283,13 +302,14 @@ const Main = ({ lang }) => {
           </WrapBlock>
           <WrapBlock>
             <BlockTitle style={{ color: "#22DFAB" }}>
-              {lang === "ru" ? ">" : ">"}1 {lang === "ru" ? "года" : "Year"}
+              {">"} {data && <>{data.days}</>}
+              {lang === "ru" ? " дней" : "days"}
             </BlockTitle>
             <BlockText>Online</BlockText>
           </WrapBlock>
           <WrapBlock>
             <BlockTitle style={{ color: " #FBC12E;" }}>
-              {lang === "ru" ? ">" : ">"}300k
+              {">"} {data && <>{roundNumber(data.tests)}</>}
             </BlockTitle>
             <BlockText>
               {lang === "ru" ? "Совершенных тестов" : "Completed Tests"}
@@ -297,7 +317,7 @@ const Main = ({ lang }) => {
           </WrapBlock>
           <WrapBlock>
             <BlockTitle style={{ color: "#AC8AF8" }}>
-              {lang === "ru" ? ">" : ">"}80
+              {">"} {data && <>{data.methods}</>}
             </BlockTitle>
             <BlockText>
               {lang === "ru" ? "Доступно методов" : "Available Methods"}

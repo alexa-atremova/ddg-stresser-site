@@ -284,7 +284,7 @@ export const BlockTitle = styled.h2`
   font-family: "Inter";
   font-style: normal;
   font-weight: 900;
-  font-size: 55px;
+  font-size: 40px;
   padding: 20px;
   line-height: 55px;
   margin: 0;
@@ -294,7 +294,7 @@ export const BlockTitle = styled.h2`
   @media (max-width: 1919px) {
     width: 221px;
     height: 67.59px;
-    font-size: 40px;
+    font-size: 30px;
     line-height: 40px;
     padding: 15px;
   }
